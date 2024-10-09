@@ -1,0 +1,26 @@
+#root {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+
+.canvas-container {
+  width: 100vw;
+  height: 100vh; /* Ensure the canvas takes the full height */
+  overflow: hidden; /* Prevent any overflow */
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
