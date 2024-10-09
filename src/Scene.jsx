@@ -26,32 +26,28 @@ const FlatMesh = () => {
     mesh.current.material.uniforms.u_time.value = clock.getElapsedTime();
   });
 
+  const meshes = [];
+
+  for (let x = -2; x <= 2; x+=2){
+    for (let y=-2; y<= 2; y+=2){
+      meshes.push(
+        <mesh ref={mesh} position={[x, y, -x]} rotation={[-Math.PI / 2, Math.PI / 6, 0]} scale={1.5}>
+          <planeGeometry args={[1, 1, 45, 45]} />
+          <shaderMaterial
+          fragmentShader={fragmentShader}
+          vertexShader={vertexShader}
+          uniforms={uniforms}
+          />
+        </mesh>
+        );
+      }
+    }
+
+
   return (
     <>
-    <mesh ref={mesh} position={[0, 1, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5}>
-      <planeGeometry args={[1, 1, 45, 45]} />
-      <shaderMaterial
-        fragmentShader={fragmentShader}
-        vertexShader={vertexShader}
-        uniforms={uniforms}
-      />
-    </mesh>
-    <mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5}>
-      <planeGeometry args={[1, 1, 45, 45]} />
-      <shaderMaterial
-        fragmentShader={fragmentShader}
-        vertexShader={vertexShader}
-        uniforms={uniforms}
-      />
-    </mesh>
-    <mesh ref={mesh} position={[0, -1, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5}>
-      <planeGeometry args={[1, 1, 45, 45]} />
-      <shaderMaterial
-        fragmentShader={fragmentShader}
-        vertexShader={vertexShader}
-        uniforms={uniforms}
-      />
-    </mesh>
+    
+    {meshes}
     {/* <mesh position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5}>
         <sphereGeometry args={[0.12]}/>
     </mesh> */}
@@ -62,7 +58,7 @@ const FlatMesh = () => {
 const Scene = () => {
   return (
     <section className="canvas-container">
-      <Canvas className="canvas" dpr={[1, 2]} camera={{ position: [4, 4, 5], rotation:[0,0,0], fov: 45 }} shadows>
+      <Canvas className="canvas" dpr={[1, 2]} camera={{ position: [10, 0, 10], rotation:[0,0,0], fov: 45 }} shadows>
         <color attach="background" args={["#FFC0CB"]} />
         <ambientLight intensity={0.7} /> 
         <directionalLight position={[5, 5, 5]} intensity={1} castShadow/>
