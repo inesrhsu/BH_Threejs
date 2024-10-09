@@ -31,7 +31,7 @@ const FlatMesh = () => {
   for (let x = -2; x <= 2; x+=2){
     for (let y=-2; y<= 2; y+=2){
       meshes.push(
-        <mesh ref={mesh} position={[x, y, -x]} rotation={[-Math.PI / 2, Math.PI / 6, 0]} scale={1.5}>
+        <mesh ref={mesh} position={[x, y, -x]} rotation={[-Math.PI / 3, Math.PI / 6, 0]} scale={1.5}>
           <planeGeometry args={[1, 1, 45, 45]} />
           <shaderMaterial
           fragmentShader={fragmentShader}
