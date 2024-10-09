@@ -28,15 +28,28 @@ const FlatMesh = () => {
 
   return (
     <>
-    <mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5}>
+    <mesh ref={mesh} position={[0, 1, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5}>
       <planeGeometry args={[1, 1, 45, 45]} />
-      {/* <meshBasicMaterial color="red" />  */}
-      {/* <boxGeometry args={[0.1, 0.1, 0.1]}/> */}
       <shaderMaterial
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}
         uniforms={uniforms}
-        // wireframe
+      />
+    </mesh>
+    <mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5}>
+      <planeGeometry args={[1, 1, 45, 45]} />
+      <shaderMaterial
+        fragmentShader={fragmentShader}
+        vertexShader={vertexShader}
+        uniforms={uniforms}
+      />
+    </mesh>
+    <mesh ref={mesh} position={[0, -1, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5}>
+      <planeGeometry args={[1, 1, 45, 45]} />
+      <shaderMaterial
+        fragmentShader={fragmentShader}
+        vertexShader={vertexShader}
+        uniforms={uniforms}
       />
     </mesh>
     {/* <mesh position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5}>
