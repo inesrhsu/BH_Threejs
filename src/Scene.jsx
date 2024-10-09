@@ -27,6 +27,7 @@ const FlatMesh = () => {
   });
 
   return (
+    <>
     <mesh ref={mesh} position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5}>
       <planeGeometry args={[1, 1, 45, 45]} />
       {/* <meshBasicMaterial color="red" />  */}
@@ -38,6 +39,10 @@ const FlatMesh = () => {
         // wireframe
       />
     </mesh>
+    <mesh position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={1.5}>
+        <sphereGeometry args={[0.12]}/>
+    </mesh>
+    </>
   );
 };
 
