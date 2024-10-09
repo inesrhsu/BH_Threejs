@@ -1,7 +1,7 @@
 varying vec2 vUv;
 
 vec3 colorA = vec3(0.0,0.0,1.0);
-vec3 colorB = vec3(1.000,0.0,0.0);
+vec3 colorB = vec3(0.2,0.9,1.0);
 
 void main() {
   // "Normalizing" with an arbitrary value
