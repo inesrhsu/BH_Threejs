@@ -49,7 +49,7 @@ const FlatMesh = () => {
 const Scene = () => {
   return (
     <section className="canvas-container">
-      <Canvas className="canvas" dpr={[1, 2]} camera={{ position: [0, 0, 5], fov: 45 }} shadows>
+      <Canvas className="canvas" dpr={[1, 2]} camera={{ position: [4, 4, 5], rotation:[0,0,0], fov: 45 }} shadows>
         <color attach="background" args={["#FFC0CB"]} />
         <ambientLight intensity={0.7} /> 
         <directionalLight position={[5, 5, 5]} intensity={1} castShadow/>
