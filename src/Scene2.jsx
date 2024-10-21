@@ -84,8 +84,8 @@ function WaveInstance({position}) {
     const elapsedTime = clock.getElapsedTime();
 
     ref.current.rotation.set(
-        -Math.PI/((Math.sin(elapsedTime/2)*2+4)) + Math.PI/2.5 + position[0], 
-        Math.PI / 6 - Math.PI / 6 + position[1], 
+        -Math.PI/((Math.sin((position[0]+position[1]+elapsedTime)/1.3)*2+4)) + Math.PI/2.5, 
+        Math.PI / 6 - Math.PI / 6, 
         0);
 
   })
