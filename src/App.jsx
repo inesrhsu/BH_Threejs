@@ -1,10 +1,11 @@
 import './App.css';
-import Scene from './Scene'; // Ensure this is the correct path
+// import Scene from './WaveExperiments'; 
+import Scene2 from './Scene2';
 
 function App() {
   return (
     <main>
-      <Scene />
+      <Scene2 />
     </main>
   );
 }
