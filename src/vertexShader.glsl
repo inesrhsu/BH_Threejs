@@ -1,9 +1,13 @@
 uniform float u_time;
 
 varying vec2 vUv;
+varying float vOffset;
+
+attribute float offset;
 
 void main() {
   vUv = uv;
+
   vec4 modelPosition = modelMatrix * vec4(position, 1.0);
   #ifdef USE_INSTANCING
     	modelPosition = instanceMatrix * modelPosition;

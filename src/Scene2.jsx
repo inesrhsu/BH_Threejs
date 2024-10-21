@@ -54,7 +54,7 @@ function Waves() {
   useFrame((state) => {
     const { clock } = state;
     const elapsedTime = clock.getElapsedTime();
-    ref.current.material.uniforms.u_time.value = elapsedTime;2
+    ref.current.material.uniforms.u_time.value = elapsedTime;
   });
   
   return (
@@ -67,7 +67,7 @@ function Waves() {
           uniforms={uniforms}
           />
       {particles.map((data, i) => (    
-        <WaveInstance key={i} {...data} />
+        <WaveInstance key={i} position={data.position} />
       ))}
     </Instances>
   )
@@ -88,7 +88,8 @@ function WaveInstance({position}) {
         Math.PI / 6 - Math.PI / 6, 
         0);
 
-  })
+  });
+//   const posOffset = Math.abs(position[0]);
   return <Instance ref={ref} />
 }
 
