@@ -1,11 +1,11 @@
 import './App.css';
 // import Scene from './WaveExperiments'; 
-import Scene2 from './Scene2';
+import WaveExperiments3 from './WaveExperiments3';
 
 function App() {
   return (
     <main>
-      <Scene2 />
+      <WaveExperiments3 />
     </main>
   );
 }

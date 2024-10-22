@@ -65,6 +65,7 @@ function Waves() {
           fragmentShader={fragmentShader}
           vertexShader={vertexShader}
           uniforms={uniforms}
+          
           />
       {particles.map((data, i) => (    
         <WaveInstance key={i} position={data.position} />
