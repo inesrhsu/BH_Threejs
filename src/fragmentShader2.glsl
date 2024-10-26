@@ -1,4 +1,6 @@
 uniform float u_time;
+uniform vec3 u_color1;
+uniform vec3 u_color2;
 
 varying vec2 vUv;
 varying float vOffset;
@@ -19,7 +21,7 @@ void main() {
     vec2 uv = rotationMatrix * (vUv - 0.5) + 0.5; // Center the rotation around (0.5, 0.5)
     //sin between 0.3 and 0.8
     //vec3 color = mix(colorA*2.0+sin((u_time))*0.5/2.5+0.55, colorB, sin(64.0*uv.x/1.5));
-    vec3 color = mix(colorA*2.0+sin((u_time))*0.15/2.0+0.725, colorB, sin(32.0*uv.x/1.5));
+    vec3 color = mix(u_color1, u_color2, sin(24.0*uv.x));
 
   gl_FragColor = vec4(color,1.0);
 }

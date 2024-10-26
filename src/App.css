@@ -17,6 +17,76 @@
   height: 100%;
 }
 
+.color-box{
+  position:fixed;
+  left:20px;
+  top:20px;
+  z-index:1;
+  background-color: #f0f0f088;
+  width: 200px;
+  height: 280px;
+  border-radius: 10px;
+  color: rgb(0, 86, 110);
+  font-family:Lato,'Courier New', Courier, sans-serif;
+  font-weight: 300;
+  border:3px solid #f0f0f0bb;
+}
+
+.color-pickers{
+  width: 200px; 
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  padding-bottom: 5px;
+  /* gap: 20px; */
+}
+
+.color-pickers .react-colorful{
+  /* transform: scale(0.4); */
+  /* transform-origin: top left;  */
+  height: 80px;
+  width: 80px;
+  box-sizing: border-box;
+  border:3px solid #f0f0f0bb;
+  border-radius: 6px;
+  /* border: 1px solid blue; */
+}
+
+.color-pickers .react-colorful__saturation {
+  height: 60px;
+  border-radius: 4px 4px 0 0;
+}
+.color-pickers .react-colorful__saturation-pointer {
+  width: 20px;
+  height: 20px;
+  border-radius: 10;
+}
+.color-pickers .react-colorful__hue {
+  height: 10px;
+  border-radius: 0 0 4px 4px;
+}
+.color-pickers .react-colorful__hue-pointer {
+  width: 20px;
+  height: 20px;
+  border-radius: 10;
+}
+.text{
+  /* height:25px; */
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+.text-title{
+  /* height:25px; */
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: #f0f0f088;
+  border-radius: 7px;
+}
+
 
 
 
