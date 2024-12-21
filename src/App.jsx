@@ -1,11 +1,13 @@
 import './App.css';
 // import Scene from './WaveExperiments'; 
-import WaveExperiments3 from './WaveExperiments3';
+// import WaveExperiments3 from './WaveExperiments3';
+//import FlowerExperiments from './FlowerExperiments';
+import BlackHoleParticlesScene from './BlackHoleParticles';
 
 function App() {
   return (
     <main>
-      <WaveExperiments3 />
+      <BlackHoleParticlesScene />
     </main>
   );
 }
